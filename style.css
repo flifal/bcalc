@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+:root {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    /* colors */
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    background-color: var(--Off-white);
+    display: grid;
+    place-items: center;
+}
+main {
+    background-color: var(--White);
+    width: 500px;
+    padding: 50px 35px;
+    border-radius: 10px 10px 130px 10px;
+}
+
+form {
+    display: flex;
+    gap: 20px;
+}
+.input-container {
+    position: relative;
+    width: calc(100% / 5);
+}
+.input-container input {
+    color: var(--Off-black);
+    border: 1.5px var(--Light-grey) solid;
+    border-radius: 5px;
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 7px 12px;
+    width: 100%;
+}
+.input-container input::placeholder {
+    font-weight: 800;
+    font-size: 0.6rem;
+}
+.input-container label {
+    font-size: 0.35rem;
+    letter-spacing: 2px;
+    color: var(--Smokey-grey);
+    text-transform: uppercase;
+    position: absolute;
+    top: -16px;
+    left: 0;
+}
+.output div {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-style: italic;
+}
+.number {
+    letter-spacing: 5px;
+    color: var(--Purple);
+}
+
+hr {
+    background-color: var(--Light-grey);
+    width: 100%;
+    height: 1px;
+}
+@media (max-width: 575px) {
+    main {
+        padding: 35px 25px;
+        width: 360px;
+    }
+    .input-container {
+        width: calc(100% / 3);
+    }
+}
